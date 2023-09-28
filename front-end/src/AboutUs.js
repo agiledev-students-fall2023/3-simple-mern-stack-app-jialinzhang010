@@ -10,8 +10,7 @@ const Home = props => {
     <>
       <h1>Jalen Zhang</h1>
       <p id="self-intro">
-        Hello. My name is Jalen Zhang. I am a senior student majoring in
-        computer science. I enjoy programming and playing soccer. I'm really looking forward to collaborating with my team members on an exciting project that combines creativity with technical skills.
+        Hello. My name is Jalen Zhang. I am a senior student majoring in computer science. I enjoy programming and playing soccer. I'm really looking forward to collaborating with my team members on an exciting project that combines creativity with technical skills.
       </p>
       <div></div>
       <img src={image} alt="Jalen Zhang" height={200 * 1.7} width={200} />
