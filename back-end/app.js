@@ -26,7 +26,7 @@ app.get('/aboutus', async (req, res) => {
   try {
     res.json({
       intro:
-        "Hello. My name is Jalen Zhang. I am a senior student majoring in computer science. I enjoy programming and playing soccer. I'm really looking forward to collaborating with my team members on an exciting project that combines creativity with technical skills.",
+        "Hello, my name is Jalen Zhang and I'm currently a senior pursuing a major in computer science.  I'm an avid soccer player. Soccer is not just a sport for me; it's a perfect blend of teamwork, strategy, and physical exercise that keeps me balanced. It also parallels my love for collaboration and strategy, values that I bring into my computer science projects. When I'm not coding or playing soccer, I often find solace in music. My musical tastes are quite eclectic, ranging from classical symphonies that calm the mind to modern pop music that energizes the soul. I'm also an enthusiastic gamer and my favorite game to play is Genshin Impact. Gaming provides another avenue for me to strategize and solve problems, albeit in a different context than what I encounter in my computer science studies. Looking ahead, I'm truly excited about future collaborations with my teammates on projects that will not only put our technical skills to the test but also require us to be creative.",
       imageUrl: '/static/image.jpg',
     })
   } catch (err) {
