@@ -5,7 +5,7 @@
  */
 import image from './image.jpg'
 import './AboutUs.css'
-const Home = props => {
+const AboutUs = props => {
   return (
     <>
       <h1>Jalen Zhang</h1>
@@ -19,4 +19,4 @@ const Home = props => {
 }
 
 // make this component available to be imported into any other file
-export default Home
+export default AboutUs
