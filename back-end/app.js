@@ -11,7 +11,7 @@ app.use(cors()) // allow cross-origin resource sharing
 // use express's builtin body-parser middleware to parse any data included in a request
 app.use(express.json()) // decode JSON-formatted incoming POST data
 app.use(express.urlencoded({ extended: true })) // decode url-encoded incoming POST data
-
+app.use('/static', express.static('public'))
 // connect to database
 mongoose
   .connect(`${process.env.DB_CONNECTION_STRING}`)
@@ -22,7 +22,21 @@ mongoose
 const { Message } = require('./models/Message')
 const { User } = require('./models/User')
 
-
+app.get('/aboutus', async (req, res) => {
+  try {
+    res.json({
+      intro:
+        "Hello. My name is Jalen Zhang. I am a senior student majoring in computer science. I enjoy programming and playing soccer. I'm really looking forward to collaborating with my team members on an exciting project that combines creativity with technical skills.",
+      imageUrl: '/static/image.jpg',
+    })
+  } catch (err) {
+    console.error(err)
+    res.status(400).json({
+      error: err,
+      status: 'failed to retrieve information',
+    })
+  }
+})
 // a route to handle fetching all messages
 app.get('/messages', async (req, res) => {
   // load all messages from database
